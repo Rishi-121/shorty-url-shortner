@@ -30,7 +30,9 @@ const createURL = async (req, res, next) => {
     await newUrl.save();
     res
       .status(201)
-      .send("<p>https://shorty-url-shrinker.herokuapp.com/" + slug + "</p>");
+      .send(
+        "<p><em>https://shorty-url-shrinker.herokuapp.com/" + slug + "</em></p>"
+      );
   } catch (error) {
     error.status = 500;
     next(error);
