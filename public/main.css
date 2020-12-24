@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Kurale&display=swap");
+
+* {
+  font-family: Kurale;
+}
+
+h1.heading {
+  padding: 2%;
+  background-color: #c82333;
+  color: #fff;
+}
+
+form {
+  margin: 5rem 10rem;
+  background-color: #fff !important;
+}
+
+@media (max-width: 767px) {
+  h1.heading {
+    font-size: 1.8rem;
+    padding: 5%;
+  }
+}
