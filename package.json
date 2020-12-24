@@ -1,7 +1,7 @@
 {
   "name": "shorty",
   "version": "1.0.0",
-  "description": "",
+  "description": "Shorty - URL Shortner",
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
@@ -17,11 +17,9 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "mongoose": "^5.11.8",
+    "morgan": "^1.10.0",
     "nanoid": "^3.1.20",
     "path": "^0.12.7",
     "valid-url": "^1.0.9"
-  },
-  "devDependencies": {
-    
   }
 }
