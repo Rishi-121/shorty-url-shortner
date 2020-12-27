@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
-const validUrl = require("valid-url");
+
+const regex = /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/gi;
 
 const urlSchema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,
@@ -13,7 +14,7 @@ const urlSchema = mongoose.Schema({
     required: true,
     trim: true,
     validate(u) {
-      if (validUrl.isUri(u) === undefined) {
+      if (!regex.test(u)) {
         throw new Error("Invalid URL!");
       }
     },
