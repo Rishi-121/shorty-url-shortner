@@ -1,4 +1,4 @@
-# _Shorty URL Shortner_
+# _Shorty URL Shortener_
 
 **_Homepage_**
 
