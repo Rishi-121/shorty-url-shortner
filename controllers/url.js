@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const URL = require("../models/url");
 const { nanoid } = require("nanoid");
 const path = require("path");
+const end_point = require("../config/url-config");
 
 const helloWorld = (req, res) => {
   res.status(200).json({
@@ -28,11 +29,7 @@ const createURL = async (req, res, next) => {
       url: url,
     });
     await newUrl.save();
-    res
-      .status(201)
-      .send(
-        "<p><em>https://shorty-url-shrinker.herokuapp.com/" + slug + "</em></p>"
-      );
+    res.status(201).send(`<p><em>${end_point}` + slug + `</em></p>`);
   } catch (error) {
     error.status = 500;
     next(error);
